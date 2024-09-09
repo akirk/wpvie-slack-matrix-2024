@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>Matrix as an Alternative to Slack</title>
+	<link rel="stylesheet" href="dist/reveal.css">
+	<link rel="stylesheet" href="dist/theme/moon.css">
+	<style>
+		:root {
+			--r-heading1-size: 3em;
+		}
+		object {
+			fill: var( --r-background-color );
+			background: var( --r-background-color );
+		}
+		.reveal ul {
+			margin-left: 0;
+			padding-left: 0;
+		}
+		ul li {
+			margin-bottom: .6em;
+			list-style-type: none;
+		}
+		ul li ul li:first-child {
+			margin-top: .2em;
+		}
+		ul li ul li {
+			margin-bottom: .2em;
+			list-style-type: "- ";
+		}
+		ul li ul li.arrow {
+			margin-left: .8em;
+			list-style-type: "→ ";
+		}
+
+		table.contact {
+			margin-top: .5em;
+		}
+		table.contact tr td, table.contact tr td a {
+			color: var( --r-main-color );
+		}
+		table.contact tr td {
+			font-size: 90%;
+			border-bottom: 0;
+		}
+		a:link {
+			text-decoration: underline;
+		}
+		a:link, a:active, a:visited {
+			color: var( --r-main-color );
+		}
+		a.highlight:link, a.highlight:active, a.highlight:visited, a.highlight:hover {
+			color: var( --r-link-color );
+		}
+		.current-fragment a.highlight:link, .current-fragment a.highlight:visited {
+			color: var( --r-link-color-hover );
+		}
+		.current-fragment, .current-fragment a:link, .current-fragment a:visited, .white {
+			color: white;
+		}
+		.small {
+			font-size: 80%;
+		}
+		.blue {
+			color: var( --r-link-color );
+		}
+		tt {
+			border-radius: 4px;
+			border: 1px solid #666;
+			padding: 2px 6px;
+		}
+	</style>
+</head>
+<body>
+	<div class="reveal">
+		<div class="slides">
+			<section>
+				<h3>(In the Context of WordPress)</h3>
+				<h1>Matrix as an<br/>Alternativeto Slack</h1>
+				<div style="font-size: .5em; margin-top: 1em">
+					<img src="img/alex.kirk.jpg" width="128" alt="Alex Kirk" style="border-radius: 64px"/><br/>
+					Alex Kirk
+					<table class="contact">
+						<tr><td>Blog</td><td><a href="https://alex.kirk.at/">https://alex.kirk.at/</a></td></tr>
+						<tr><td>Matrix</td><td>@alex:kirk.at</td></tr>
+						<tr><td>ActivityPub</td><td>@alex@kirk.at</td></tr>
+					</table>
+				</div>
+			</section>
+
+			<section>
+				<h2>Alex Kirk</h2>
+				<ul>
+					<li class="fragment">From Vienna, Austria</li>
+					<li class="fragment">At <a href="https://automattic.com/" class="highlight">Automattic</a> (runs WordPress.com & more) since 2014
+						<ul>
+							<li class="fragment">Engineer, leading teams around Localization, Playground, Data Liberation &amp; previously, Matrix</li>
+							<li class="fragment">Sponsored to contribute to WordPress.org in Meta and Polyglots</li>
+						</ul>
+					</li>
+					<li class="fragment">Sideprojects in the decentralized web space
+						<ul>
+							<li class="fragment"><a href="https://wordpress.org/plugins/friends/" class="highlight">Friends Plugin</a>: Make your blog your own hub for subscribing to and interacting with others via RSS, ActivityPub, ...</li>
+							<li class="fragment"><a href="https://wordpress.org/plugins/enable-mastodon-apps/" class="highlight">Enable Mastodon Apps</a>: Use <a href="https://tapbots.com/ivory/">Ivory</a>, <a href="https://github.com/tuskyapp/Tusky/">Tusky</a>, ... with your site</li>
+						</ul>
+					</li>
+				</ul>
+			</section>
+
+			<section>
+				<h2>Slack?</h2>
+				<ul>
+					<li class="fragment">Slack was opened to the public in 2013</li>
+					<li class="fragment"><a href="https://en.wikipedia.org/wiki/Backronym">Backronym</a>: "Searchable Log of All Conversation and Knowledge"</li>
+					<li class="fragment">Created for intra-company communication in "workspaces"</li>
+					<li class="fragment">Superior to comparable services with great search and notifications</li>
+					<li class="fragment">You can join a workspace with the associated e-mail host</li>
+				</ul>
+			</section>
+
+			<section>
+				<a href="https://wordpress.slack.com" class="highlight">https://wordpress.slack.com/</a><br/>
+				<img src="img/slack-wp.png" alt="View of the WordPress.org Slack Interface" />
+			</section>
+
+
+			<section>
+				<h2>Slack &amp; WordPress</h2>
+				<ul>
+					<li class="fragment">The <a href="https://codex.wordpress.org/WordPress_IRC_Live_Help">WordPress Project originally used IRC</a> for communication (and some Make teams still do)</li>
+					<li class="fragment">In 2014 the project transitioned to Slack, keeping IRC still alive</li>
+					<li class="fragment">Because of Slack's e-mail requirements, <a href="https://make.wordpress.org/chat/">signing up is a little complicated</a> → you get a @chat.wordpress.org</li>
+					<li class="fragment"><a href="https://make.wordpress.org/meetings/">Weekly team chat meetings</a> happen via Slack</li>
+					<li class="fragment"><a href="https://wordpress.org/support/forums/">Chat is not for support, please use the forums</a></li>
+				</ul>
+			</section>
+
+			<section>
+				<a href="https://make.wordpress.org/meetings/" class="highlight">https://make.wordpress.org/meetings/</a><br/>
+				<img src="img/make-wordpress-org-meetings.png" alt="Calendar view of the WordPress.org community meetings" />
+			</section>
+
+
+			<section>
+				<h2>Local Slack Communities</h2>
+				<ul>
+					<li class="fragment">Austria WP Community: <a href="https://austriawpcommunity.slack.com">austriawpcommunity.slack.com</a></li>
+					<li class="fragment">Limited by Slack's free plan (90 days message history)</li>
+					<li class="fragment">Tricky to discover, no central "local Slack" directory</li>
+					<li class="fragment">Who's on which Slack?</li>
+				</ul>
+			</section>
+
+			<section>
+				<h3 style="float: right"><a href="https://matrix.org/">matrix.org</a></h3>
+				<h2>Matrix</h2>
+				<ul>
+					<li class="fragment">Matrix is an open network for secure, decentralized communication</li>
+					<li class="fragment">Uses Federation: No central server, messages are relayed</li>
+					<li class="fragment">Rooms not channels</li>
+					<li class="fragment">Optional end-to-end encryption for rooms</li>
+					<li class="fragment">Bridges, many different clients</li>
+				</ul>
+			</section>
+
+			<section>
+				Matrix: Element Client<br/>
+				<img src="img/matrix-wordpress-net.png" alt="View of the WordPress.org Matrix server" />
+			</section>
+
+			<section>
+				<h2>Matrix + WordPress = ❤️?</h2>
+				<ul>
+					<li class="fragment">Open Source Chat for an Open Source Project</li>
+					<li class="fragment">No retention limits</li>
+					<li class="fragment">Free choice of clients</li>
+					<li class="fragment">Unite multiple Slack workspaces (local communities)</li>
+				</ul>
+			</section>
+
+			<section>
+				<h2>Let's See if we can migrate</h2>
+				<ul>
+					<li class="fragment">January 25, 2023<ul><li>Announcement: <a href="https://make.wordpress.org/meta/2023/01/25/a-meta-subproject-for-evaluating-matrix/" class="highlight">A Meta subproject for evaluating Matrix</a></li></ul></li>
+					<li class="fragment">January to April 2023<ul><li>Evaluate and create the Matrix infrastructure</li></ul></li>
+					<li class="fragment">May to September 2023<ul><li>Migrate history and integrations, test with teams</li></ul></li>
+					<li class="fragment">October to December 2023<ul><li>Launch, finalize migrations, turn off Slack</li></ul></li>
+				</ul>
+			</section>
+
+			<section>
+				<h2>Evaluation of Matrix for WordPress.org</h2>
+				<ul>
+					<li class="fragment">Will unite local communities</li>
+					<li class="fragment">We can make it easier to join than Slack</li>
+					<li class="fragment">A bridge can help with the transition</li>
+					<li class="fragment">A number of Slack features are missing or work differently</li>
+				</ul>
+			</section>
+
+			<section>
+				<h2>Important Differences between Slack and Matrix</h2>
+				<ul>
+					<li class="fragment">Room Management in Slack is superior
+						<ul>
+							<li class="fragment">Slack: Group rooms in the sidebar, Threads view</li>
+							<li class="fragment">Matrix: Spaces</li>
+						</ul>
+					</li>
+					<li class="fragment">Slack has Reminders and Scheduled sending, Matrix doesn't</li>
+					<li class="fragment">Huge number of Slack apps, many Matrix (hobby) bots</li>
+					<li class="fragment">Search in Matrix is worse (e.g. no facets: by author, by date)</li>
+				</ul>
+			</section>
+
+			<section>
+				<h2>Making it easier to join Matrix 1/2</h2>
+				<p class="fragment"><a href="https://github.com/Automattic/wp-openid-connect-server" class="highlight">OpenID Connect Server</a> WordPress plugin</p>
+				<ul>
+					<li class="fragment">Makes your WordPress an OIDC provider</li>
+					<li class="fragment">→ WordPress.org users can login with their account</li>
+				</ul>
+				<img src="img/authorize-matrix.png" alt="" height="300" class="fragment"/>
+			</section>
+
+			<section>
+				<h2>Making it easier to join Matrix 2/2</h2>
+				<p class="fragment"><a href="https://github.com/Automattic/chatrix" class="highlight">Chatrix</a>: Matrix client in a WordPress block</p>
+				<ul>
+					<li class="fragment">Block = part of a WordPress post that can be placed anywhere</li>
+					<li class="fragment">Each Chatrix block can be configured individually</li>
+					<li class="fragment">Predefine a home server, optionally restrict to a single room</li>
+				</ul>
+			</section>
+
+			<section>
+				<h2>Team Chat Pages</h2>
+				<ul>
+					<li class="fragment">Provide a WordPress.org Chat URL → No need to know what Matrix is, how to configure your client, or create a new chat account</li>
+					<li class="fragment"><a href="https://make.wordpress.org/chat/matrix/using-a-p2-chat-page/">Dedicated pages on the teams' blogs</a>, like:
+						<ul class="small">
+							<li class="fragment">
+								Make WordPress Core <a href="https://make.wordpress.org/core/">https://make.wordpress.org/core/</a>
+								<ul>
+									<li class="fragment"><a href="https://make.wordpress.org/core/chat/">https://make.wordpress.org/core<span class="blue">/chat/</span></a></li>
+									<li class="fragment"><a href="https://make.wordpress.org/core/chat-editor/">https://make.wordpress.org/core<span class="blue">/chat-editor/</span></a></li>
+								</ul>
+							</li>
+							<li class="fragment">
+								Make WordPress Design <a href="https://make.wordpress.org/design/">https://make.wordpress.org/design/</a>
+								<ul>
+									<li><a href="https://make.wordpress.org/design/chat/">https://make.wordpress.org/design<span class="blue">/chat/</span></a></li>
+								</ul>
+							</li>
+						</ul>
+					</li>
+				</ul>
+			</section>
+
+			<section>
+				<a href="https://make.wordpress.org/polyglots/chat/" class="highlight">https://make.wordpress.org/polyglots/chat/</a><br/>
+				<div class="r-stack">
+					<img src="img/make-wordpress-org-polyglots-chat-unhighlighted.png" alt="Making WordPress Polyglots Team chat page"/>
+					<img src="img/make-wordpress-org-polyglots-chat.png" alt="Making WordPress Polyglots Team chat page with highlighted upper section containing the next meeting time" class="fragment"/>
+					<img src="img/make-wordpress-org-polyglots-chat2.png" alt="Making WordPress Polyglots Team chat page with highlighted lower section containing the Matrix chat" class="fragment"/>
+				</div>
+			</section>
+
+			<section>
+				<h3>Creating a new post with a Chatrix block</h3>
+				<video data-autoplay data-src="img/create-chatrix-page.mp4" type="video/mp4" alt="A screen recording showing how to create a post with a Chatrix block"></video>
+			</section>
+
+			<section>
+				<h2>Making it easier to join Matrix</h2>
+				<p class="white">We host <a href="https://matrix.wordpress.net/" class="highlight">a preconfigured Element Web</a></p>
+
+				<img src="img/matrix-wordpress-net.png" alt="" height="500"/>
+			</section>
+
+			<section>
+				<h2>You can use Matrix to chat on WordPress.org Today</h2>
+				<ul>
+					<li class="fragment">All channels are bridged</li>
+					<li class="fragment">Make team chat pages exist</li>
+					<li class="fragment">You can use your WordPress.org account to chat</li>
+					<li class="fragment">We did not turn off Slack</li>
+				</ul>
+			</section>
+
+			<section>
+				<h2>Feedback we anticipated</h2>
+				<ul>
+					<li class="fragment">Most people don't want to choose clients, they want to go with the standard provided → Element</li>
+					<li class="fragment">Notification Management in Element
+						<ul>
+							<li class="fragment small">No dedicated threads and mentions view</li>
+							<li class="fragment small">Cannot mark message as unread</li>
+						</ul>
+					</li>
+					<li class="fragment">Search in Element: No filters, (global) search discoverability</li>
+					<li class="fragment">Other clients miss important features like threads</li>
+					<li class="fragment">All the troubles that come with providing a homeserver for any community member (e.g. unrestricted room creation)</li>
+				</ul>
+			</section>
+
+			<section>
+				<h2>Why we didn't turn off Slack 1/2</h2>
+				<p><a href="https://github.com/WordPress/Matrix/issues" class="highlight">github.com/WordPress/Matrix/issues</a></p>
+				<ul>
+					<li class="fragment">Unable to enforce some things like on Slack
+						<ul>
+							<li class="fragment"><a href="https://github.com/WordPress/matrix/issues/20">Cannot limit time allowed for editing messages</a></li>
+							<li class="fragment"><a href="https://github.com/WordPress/matrix/issues/17">Unable to enforce room membership for federated users</a></li>
+							<li class="fragment"><a href="https://github.com/WordPress/matrix/issues/17">Thread messages cannot be also cc-ed to room</a></li>
+						</ul>
+					</li>
+					<li class="fragment">Slack features considered essential
+						<ul>
+							<li class="fragment">Pings/Mentions: <a href="https://github.com/WordPress/matrix/issues/3">no @here equivalent</a>, <a href="https://github.com/WordPress/matrix/issues/13">cannot ping groups</a></li>
+							<li class="fragment"><a href="https://github.com/WordPress/matrix/issues/32">scheduling of messages</a>, <a href="https://github.com/WordPress/matrix/issues/32">reminders</a></li>
+						</ul>
+					</li>
+				</ul>
+			</section>
+
+			<section>
+				<h2>Why we didn't turn off Slack 2/2</h2>
+				<p><a href="https://github.com/WordPress/Matrix/issues" class="highlight">github.com/WordPress/Matrix/issues</a></p>
+				<ul>
+					<li class="fragment"><a href="https://make.wordpress.org/accessibility/2023/08/07/matrix-test-results/">Accessibility Problems</a> (e.g. Macro keyboard navigation, Voiceover)</li>
+					<li class="fragment">Bridge glitches (e.g. <a href="https://github.com/WordPress/matrix/issues/7">duplicates</a>, <a href="https://github.com/WordPress/matrix/issues/12">out of order</a>)</li>
+					<li class="fragment">User Experience (e.g. Notification / Threads management, No refinement of searches, Discovery of old messages)</li>
+					<li class="fragment">Matrix glitches (e.g. <a href="https://github.com/WordPress/matrix/issues/25">Failed to load timeline position</a>)</li>
+				</ul>
+			</section>
+
+			<section>
+				<h2>Filling Gaps between Slack and Matrix</h2>
+				<ul>
+					<li class="fragment">Bots can do a lot, e.g. <a href="https://github.com/maubot/rss">RSS</a>, <a href="https://github.com/maubot/github">Github</a> integration</li>
+					<li class="fragment">Imported Slack history to Matrix</li>
+					<li class="fragment">Created <a href="https://make.wordpress.org/chat/matrix/">Documentation &amp; Guides</a></li>
+				</ul>
+			</section>
+
+			<section>
+				<h2>Current Status</h2>
+				<ul>
+					<li class="fragment"><a href="https://make.wordpress.org">Making WordPress</a> remains a Slack community...</li>
+					<li class="fragment">...but now with a Matrix bridge and all Slack history</li>
+					<li class="fragment">New contributors don't need a Slack account<br/>to join chat conversations</li>
+					<li class="fragment">Turning off Slack is currently not planned</li>
+					<li class="fragment">WordPress keeps observing how the Matrix project develops</li>
+				</ul>
+			</section>
+
+			<section>
+				<h2>Summary</h2>
+				<ul>
+					<li class="fragment">The WordPress community didn't fully migrate in the end
+						<ul>
+							<li class="fragment arrow">Maybe things that didn't work for us are not relevant for you</li>
+							<li class="fragment arrow">Hopefully this talk could help you identify &amp; decide</li>
+						</ul>
+					<li class="fragment">See <a href="https://alex.kirk.at/2024/02/16/my-fosdem-2024-talk-migrating-the-wordpress-community-from-slack-to-matrix/" class="highlight">My FOSDEM 2024 Talk: Migrating the WordPress Community from Slack to Matrix</a> on <a href="https://alex.kirk.at">alex.kirk.at</a> for more details</li>
+					</li>
+				</ul>
+			</section>
+
+			<section>
+				<h1>Thank You!</h1>
+				<h2>Questions?</h2>
+				<p>
+					<a href="https://alex.kirk.at/wpvie-slack-matrix-2024/" class="highlight">https://alex.kirk.at/wpvie-slack-matrix-2024/</a><br/>
+					<span class="small">(Lots of links in the slides)</span>
+					</p>
+				<object data="img/qr-alex-kirk-at.svg" type="image/svg+xml"  width="200" height="200"></object>
+			</section>
+		</div>
+	</div>
+	<script src="dist/reveal.js"></script>
+	<script src="dist/plugin/notes/notes.js"></script>
+	<script>
+		Reveal.initialize({
+			controls: true,
+			controlsTutorial: true,
+			progress: true,
+			hash: true,
+			autoPlayMedia: true,
+			slideNumber: 'c/t',
+			width: 1200,
+		}).then( () => {
+		});
+		const videos = document.querySelectorAll('video');
+
+		videos.forEach(function(video) {
+			video.addEventListener('click', function() {
+				video.currentTime = 0; // Resets video playback to the beginning
+				video.play(); // Starts the video playback
+			});
+		});
+
+	</script>
+</body>
+</html>
