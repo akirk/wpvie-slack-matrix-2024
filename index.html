@@ -186,9 +186,34 @@
 			<section>
 				<h2>What Makes Matrix Hard?</h2>
 				<ul>
+					<li class="fragment">Federation is hard to explain: You need to enter a server URL
+						<ul>
+							<li class="fragment">You need your own homeserver, or someone provides it for you</li>
+							<li class="fragment">On the server you have a lot of permissions (e.g. create rooms)</li>
+						</ul>
+					</li>
+					<li class="fragment">Encryption is painful
+						<ul>
+							<li class="fragment">Enc</li>
+							<li class="fragment">Updates to the Spec take quite a while <a href="https://github.com/matrix-org/matrix-spec/">via issues in a Github repo</a></li>
+						</ul>
+					</li>
+					<li class="fragment">→ <a href="https://matrix.org/ecosystem/sdks/">You need to use an SDK</a> if you want to build with it</li>
+				</ul>
+			</section>
+
+			<section>
+				<h2>What Makes Building for Matrix Hard?</h2>
+				<ul>
+					<li class="fragment">Federation is hard to explain: You need to enter a server URL
+						<ul>
+							<li class="fragment">You need your own homeserver, or someone provides it for you</li>
+							<li class="fragment">On the server you have a lot of permissions (e.g. create rooms)</li>
+						</ul>
+					</li>
 					<li class="fragment">Complex Protocols: the <a href="https://spec.matrix.org/latest/">Matrix Specification</a>
 						<ul>
-							<li class="fragment">Client-Server API, Server-Server API, Application Service API, Identity Service API, Push Gateway API,...</li>
+							<li class="fragment">Client-Server API, Server-Server API, Application Service API, Identity Service API, Push Gateway API, ...</li>
 							<li class="fragment">Updates to the Spec take quite a while <a href="https://github.com/matrix-org/matrix-spec/">via issues in a Github repo</a></li>
 						</ul>
 					</li>
@@ -227,19 +252,50 @@
 			</section>
 
 			<section>
-				<h2>Important Differences between Slack and Matrix</h2>
+				<h2>Comparing Slack and Matrix</h2>
 				<ul>
-					<li class="fragment">Room Management in Slack is superior
+					<li class="fragment">Room &amp; Notification Management in Slack is superior
 						<ul>
-							<li class="fragment">Slack: Group rooms in the sidebar, Threads view</li>
+							<li class="fragment">Slack: Group rooms in the sidebar, Threads view, Unread View</li>
 							<li class="fragment">Matrix: Spaces</li>
 						</ul>
 					</li>
 					<li class="fragment">Slack has Reminders and Scheduled sending, Matrix doesn't</li>
+					<li class="fragment">Slack has Reminders and Scheduled sending, Matrix doesn't</li>
 					<li class="fragment">Huge number of Slack apps, many Matrix (hobby) bots</li>
 					<li class="fragment">Search in Matrix is worse (e.g. no facets: by author, by date)</li>
+					<li class="fragment">Matrix has E2E encryption, in Slack even DMs can be visible to admins</li>
+					<li class="fragment">Matrix has "read" indicators</li>
 				</ul>
 			</section>
+
+			<section>
+				<h2>Slack has (and Matrix not so much)</h2>
+				<ul>
+					<li class="fragment">Great Room &amp; Notification Management in Slack is superior
+						<ul>
+							<li class="fragment">Group rooms in the sidebar, Threads view, Unread View</li>
+						</ul>
+					</li>
+					<li class="fragment">Reminders and scheduled sending</li>
+					<li class="fragment">Huge number of Slack apps</li>
+					<li class="fragment">Great search with facets: by author, by date, attachments etc.</li>
+				</ul>
+			</section>
+
+			<section>
+				<h2>Matrix has (and Slack not so much)</h2>
+				<ul>
+					<li class="fragment">Spaces: Visually like but can be user defined and a room can be in multiple of them</li>
+					<li class="fragment">Slack has Reminders and Scheduled sending, Matrix doesn't</li>
+					<li class="fragment">Slack has Reminders and Scheduled sending, Matrix doesn't</li>
+					<li class="fragment">Huge number of Slack apps, many Matrix (hobby) bots</li>
+					<li class="fragment">Search in Matrix is worse (e.g. no facets: by author, by date)</li>
+					<li class="fragment">Matrix has E2E encryption, in Slack even DMs can be visible to admins</li>
+					<li class="fragment">Matrix has "read" indicators</li>
+				</ul>
+			</section>
+
 
 			<section>
 				<h2>Making it easier to join Matrix 1/2</h2>
