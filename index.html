@@ -108,7 +108,15 @@
 			</section>
 
 			<section>
-				<h2>Slack?</h2>
+				<h2>Agenda</h2>
+				<ul>
+					<li class="fragment">Overview of the Chat Systems Slack and Matrix</li>
+					<li class="fragment">Retrospective of the WordPress.org transition to Matrix</li>
+					<li class="fragment">Can Matrix be useful to you?</li>
+				</ul>
+			</section>
+			<section>
+				<h2>Slack</h2>
 				<ul>
 					<li class="fragment">Slack was opened to the public in 2013</li>
 					<li class="fragment"><a href="https://en.wikipedia.org/wiki/Backronym">Backronym</a>: "Searchable Log of All Conversation and Knowledge"</li>
@@ -125,7 +133,7 @@
 
 
 			<section>
-				<h2>Slack &amp; WordPress</h2>
+				<h2>Slack &amp; WordPress.org</h2>
 				<ul>
 					<li class="fragment">The <a href="https://codex.wordpress.org/WordPress_IRC_Live_Help">WordPress Project originally used IRC</a> for communication (and some Make teams still do)</li>
 					<li class="fragment">In 2014 the project transitioned to Slack, keeping IRC still alive</li>
@@ -146,7 +154,7 @@
 				<ul>
 					<li class="fragment">Austria WP Community: <a href="https://austriawpcommunity.slack.com">austriawpcommunity.slack.com</a></li>
 					<li class="fragment">Limited by Slack's free plan (90 days message history)</li>
-					<li class="fragment">Tricky to discover, no central "local Slack" directory</li>
+					<li class="fragment">Tricky to discover, no "local communites Slack" directory</li>
 					<li class="fragment">Who's on which Slack?</li>
 				</ul>
 			</section>
@@ -174,7 +182,6 @@
 							<li class="fragment"><a href="https://matrix.org/ecosystem/bridges/">Bridges</a>: Discord, Slack, Signal, Telegram, WhatsApp, Messenger, iMessage, Mattermost, Google Chat, Mumble, Instagram, LinkedIn, Twitter, Skype, SMS, Email, IRC</li>
 						</ul>
 					</li>
-					<li class="fragment"></li>
 				</ul>
 			</section>
 
@@ -194,27 +201,22 @@
 					</li>
 					<li class="fragment">Encryption is painful
 						<ul>
-							<li class="fragment">Enc</li>
-							<li class="fragment">Updates to the Spec take quite a while <a href="https://github.com/matrix-org/matrix-spec/">via issues in a Github repo</a></li>
+							<li class="fragment">You need to remember a security key or cross-sync with an other client</li>
+							<li class="fragment">Room history on new devices will often only be restored when other participants are online</li>
+							<li class="fragment arrow">Public Rooms should be unencrypted</li>
 						</ul>
 					</li>
-					<li class="fragment">→ <a href="https://matrix.org/ecosystem/sdks/">You need to use an SDK</a> if you want to build with it</li>
+					<li class="fragment">It's a whole new ecosystem</li>
 				</ul>
 			</section>
 
 			<section>
 				<h2>What Makes Building for Matrix Hard?</h2>
 				<ul>
-					<li class="fragment">Federation is hard to explain: You need to enter a server URL
-						<ul>
-							<li class="fragment">You need your own homeserver, or someone provides it for you</li>
-							<li class="fragment">On the server you have a lot of permissions (e.g. create rooms)</li>
-						</ul>
-					</li>
-					<li class="fragment">Complex Protocols: the <a href="https://spec.matrix.org/latest/">Matrix Specification</a>
+					<li class="fragment">Complex Protocols: the <a href="https://spec.matrix.org/latest/">Matrix Specification</a> is huge
 						<ul>
 							<li class="fragment">Client-Server API, Server-Server API, Application Service API, Identity Service API, Push Gateway API, ...</li>
-							<li class="fragment">Updates to the Spec take quite a while <a href="https://github.com/matrix-org/matrix-spec/">via issues in a Github repo</a></li>
+							<li class="fragment">Updates to the Spec take quite a while <a href="https://github.com/matrix-org/matrix-spec/">via issues in a Github repo</a> → Often a chicken-and-egg situation</li>
 						</ul>
 					</li>
 					<li class="fragment">→ <a href="https://matrix.org/ecosystem/sdks/">You need to use an SDK</a> if you want to build with it</li>
@@ -222,7 +224,7 @@
 			</section>
 
 			<section>
-				<h2>Matrix + WordPress = ❤️?</h2>
+				<h2>Matrix + WordPress.org = ❤️?</h2>
 				<ul>
 					<li class="fragment">Open Source Chat for an Open Source Project</li>
 					<li class="fragment">No retention limits</li>
@@ -232,7 +234,7 @@
 			</section>
 
 			<section>
-				<h2>Let's See if we can migrate</h2>
+				<h2>Let's See if we can migrate WordPress.org</h2>
 				<ul>
 					<li class="fragment">January 25, 2023<ul><li>Announcement: <a href="https://make.wordpress.org/meta/2023/01/25/a-meta-subproject-for-evaluating-matrix/" class="highlight">A Meta subproject for evaluating Matrix</a></li></ul></li>
 					<li class="fragment">January to April 2023<ul><li>Evaluate and create the Matrix infrastructure</li></ul></li>
@@ -254,18 +256,10 @@
 			<section>
 				<h2>Comparing Slack and Matrix</h2>
 				<ul>
-					<li class="fragment">Room &amp; Notification Management in Slack is superior
-						<ul>
-							<li class="fragment">Slack: Group rooms in the sidebar, Threads view, Unread View</li>
-							<li class="fragment">Matrix: Spaces</li>
-						</ul>
-					</li>
-					<li class="fragment">Slack has Reminders and Scheduled sending, Matrix doesn't</li>
-					<li class="fragment">Slack has Reminders and Scheduled sending, Matrix doesn't</li>
-					<li class="fragment">Huge number of Slack apps, many Matrix (hobby) bots</li>
-					<li class="fragment">Search in Matrix is worse (e.g. no facets: by author, by date)</li>
-					<li class="fragment">Matrix has E2E encryption, in Slack even DMs can be visible to admins</li>
-					<li class="fragment">Matrix has "read" indicators</li>
+					<li class="fragment">Both offer a multi-chatroom experience</li>
+					<li class="fragment">Chat functionality is similar: multiple people in a room</li>
+					<li class="fragment">History is persisted across devices</li>
+					<li class="fragment">User has an avatar that can have a profile picture</li>
 				</ul>
 			</section>
 
@@ -281,7 +275,8 @@
 					<li class="fragment">Reminders and scheduled sending</li>
 					<li class="fragment">Huge number of Slack apps</li>
 					<li class="fragment">Great search with facets: by author, by date, attachments etc.</li>
-					<li class="fragment">Huddles, Canvas, Custom unfurling</li>
+					<li class="fragment">Huddles, Canvas, Custom unfurling, Custom emojis</li>
+					<li class="fragment">User status with emoji and custom time</li>
 				</ul>
 			</section>
 
@@ -291,29 +286,30 @@
 					<li class="fragment">Spaces: Visually like but can be user defined and a room can be in multiple of them</li>
 					<li class="fragment">E2E encryption, in Slack even DMs can be visible to admins</li>
 					<li class="fragment">"Read" indicators</li>
-					<li class="fragment">Many things builtin to Slack can be done with bots</li>
+					<li class="fragment">Many things builtin to Slack can be done with bots (with a worse user experience, you need to know commands)</li>
+					<li class="fragment">Widgets can be added to rooms, for example Jitsi for video chat</li>
 					<li class="fragment">A bit of a spam problem in large, open rooms</li>
 				</ul>
 			</section>
 
 
 			<section>
-				<h2>Making it easier to join Matrix 1/2</h2>
+				<h2>Connecting WordPress and Matrix 1/2</h2>
 				<p class="fragment"><a href="https://github.com/Automattic/wp-openid-connect-server" class="highlight">OpenID Connect Server</a> WordPress plugin</p>
 				<ul>
 					<li class="fragment">Makes your WordPress an OIDC provider</li>
-					<li class="fragment">→ WordPress.org users can login with their account</li>
+					<li class="fragment">→ WordPress(.org) users can login with their account</li>
 				</ul>
 				<img src="img/authorize-matrix.png" alt="" height="300" class="fragment"/>
 			</section>
 
 			<section>
-				<h2>Making it easier to join Matrix 2/2</h2>
+				<h2>Connecting WordPress and Matrix 2/2</h2>
 				<p class="fragment"><a href="https://github.com/Automattic/chatrix" class="highlight">Chatrix</a>: Matrix client in a WordPress block</p>
 				<ul>
-					<li class="fragment">Block = part of a WordPress post that can be placed anywhere</li>
 					<li class="fragment">Each Chatrix block can be configured individually</li>
 					<li class="fragment">Predefine a home server, optionally restrict to a single room</li>
+					<li class="fragment">People can simply chat on the webpage, you can add information before and after</li>
 				</ul>
 			</section>
 
@@ -363,12 +359,12 @@
 			</section>
 
 			<section>
-				<h2>You can use Matrix to chat on WordPress.org Today</h2>
+				<h2>Path to migrating WordPress.org</h2>
 				<ul>
-					<li class="fragment">All channels are bridged</li>
-					<li class="fragment">Make team chat pages exist</li>
-					<li class="fragment">You can use your WordPress.org account to chat</li>
-					<li class="fragment">We did not turn off Slack</li>
+					<li class="fragment">January 25, 2023<ul><li>Announcement: <a href="https://make.wordpress.org/meta/2023/01/25/a-meta-subproject-for-evaluating-matrix/" class="highlight">A Meta subproject for evaluating Matrix</a></li></ul></li>
+					<li class="fragment">April 17, 2023<ul><li><a href="https://wptavern.com/wordpress-contributors-continue-exploring-migration-of-public-and-private-messages-from-slack-to-matrix" class="highlight">WordPress Contributors Continue Exploring Migration of Public and Private Messages from Slack to Matrix</a></li></ul></li>
+					<li class="fragment">July 28, 2023<ul><li><a href="https://wptavern.com/wordpress-launches-slack-matrix-bridge" class="highlight">WordPress Launches Slack/Matrix Bridge</a></li></ul></li>
+					<li class="fragment">November 30, 2023<ul><li>The migration! <a href="https://make.wordpress.org/project/2023/11/30/embracing-matrix-for-enhanced-communication/" class="highlight">Embracing Matrix for Enhanced Communication</a></li></ul></li>
 				</ul>
 			</section>
 
@@ -389,7 +385,7 @@
 			</section>
 
 			<section>
-				<h2>Why we didn't turn off Slack 1/2</h2>
+				<h2>What the WordPress.org Community Found 1/2</h2>
 				<p><a href="https://github.com/WordPress/Matrix/issues" class="highlight">github.com/WordPress/Matrix/issues</a></p>
 				<ul>
 					<li class="fragment">Unable to enforce some things like on Slack
@@ -409,7 +405,7 @@
 			</section>
 
 			<section>
-				<h2>Why we didn't turn off Slack 2/2</h2>
+				<h2>What the WordPress.org Community Found 2/2</h2>
 				<p><a href="https://github.com/WordPress/Matrix/issues" class="highlight">github.com/WordPress/Matrix/issues</a></p>
 				<ul>
 					<li class="fragment"><a href="https://make.wordpress.org/accessibility/2023/08/07/matrix-test-results/">Accessibility Problems</a> (e.g. Macro keyboard navigation, Voiceover)</li>
@@ -429,10 +425,10 @@
 			</section>
 
 			<section>
-				<h2>Current Status</h2>
+				<h2>Current Status of Chat on WordPress.org</h2>
 				<ul>
 					<li class="fragment"><a href="https://make.wordpress.org">Making WordPress</a> remains a Slack community...</li>
-					<li class="fragment">...but now with a Matrix bridge and all Slack history</li>
+					<li class="fragment">...but with a Matrix bridge and all Slack history</li>
 					<li class="fragment">New contributors don't need a Slack account<br/>to join chat conversations</li>
 					<li class="fragment">Turning off Slack is currently not planned</li>
 					<li class="fragment">WordPress keeps observing how the Matrix project develops</li>
@@ -440,10 +436,11 @@
 			</section>
 
 			<section>
-				<h2>Matrix + WordPress = (❤️)</h2>
+				<h2>Matrix + WordPress can be ❤️</h2>
 				<ul>
 					<li class="fragment">Matrix can be integrated well into WordPress (OIDC, Chatrix)</li>
 					<li class="fragment">Easy way to start a chat community around a project</li>
+					<li class="fragment">Switching a big and old community is hard. There are habbits grown over years</li>
 					<li class="fragment">Open Source approach is very different between Matrix and WordPress
 						<ul>
 							<li><a href="https://wordpress.org/five-for-the-future/">Five for the Future</a> vs. Matrix Membership</li>
@@ -456,7 +453,7 @@
 			<section>
 				<h2>More about Matrix</h2>
 				<ul>
-					<li class="fragment"><a href="https://2024.matrix.org/">Conference in Berlin next week: September 19-22</a></li>
+					<li class="fragment"><a href="https://2024.matrix.org/">Conference in Berlin next week: September 19-22, 2024</a></li>
 					<li class="fragment"><a href="https://matrix.org/membership/">Matrix.org Membership</a></li>
 					<li class="fragment"><a href="https://element.io/blog/sustainable-licensing-at-element-with-agpl/">Element switching everything to AGPL</a></li>
 					<li class="fragment"><a href="https://element.io/blog/bsi-funds-security-analysis-of-matrix/">Confusion around discovery of security holes in Matrix by the BSI</a> (<a href="https://web.archive.org/web/20240901193040/https://www.heise.de/news/BSI-findet-Sicherheitsluecken-in-Matrix-und-Mastodon-9853779.html">Heise.de: BSI deckt schwerwiegende Sicherheitslücken in Matrix und Mastodon auf</a>)</li>
